@@ -40,7 +40,8 @@ redeploy of your app. At this point, you can either write your app
 from scratch, or you can merge in changes from an existing project,
 i.e. your real app. Let's use a small app demonstrating the various
 Immutant clustering features, for example: git@github.com:immutant/cluster-demo.git:
-
+    
+    git remote add yourrealapp -m master git://github.com/immutant/cluster-demo.git
     git remote add yourrealapp -m master https://github.com/immutant/cluster-demo.git
 
     git pull -s recursive -X theirs yourrealapp master
