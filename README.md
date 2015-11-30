@@ -5,7 +5,7 @@ To install Immutant 1.0 on OpenShift, first make sure you have the
 latest [client tools](https://www.openshift.com/get-started#cli)
 installed, and then run this: OLD: rhc app-create -s yourapp https://raw.github.com/weaver-viii/openshift-immutant-cart/master/metadata/manifest.yml :
 
-    rhc app-create -s yourapp https://github.com/weaver-viii/openshift-immutant-cart/blob/master/metadata/manifest.yml
+    rhc app-create -s yourapp https://raw.githubusercontent.com/weaver-viii/openshift-immutant-cart/master/metadata/manifest.yml
 Replace `yourapp` with the name of your application. The `-s` option
 sets your app to be scalable. Once created, you can login to your gear
 like so:
@@ -39,9 +39,10 @@ Any changes you push from the `yourapp/` directory will trigger a
 redeploy of your app. At this point, you can either write your app
 from scratch, or you can merge in changes from an existing project,
 i.e. your real app. Let's use a small app demonstrating the various
-Immutant clustering features, for example:
+Immutant clustering features, for example: git@github.com:immutant/cluster-demo.git:
 
-    git remote add yourrealapp -m master git@github.com:immutant/cluster-demo.git
+    git remote add yourrealapp -m master https://github.com/immutant/cluster-demo.git
+
     git pull -s recursive -X theirs yourrealapp master
     git push
 
