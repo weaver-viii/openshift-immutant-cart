@@ -3,9 +3,8 @@ Immutant OpenShift Cartridge
 
 To install Immutant 1.0 on OpenShift, first make sure you have the
 latest [client tools](https://www.openshift.com/get-started#cli)
-installed, and then run this:
+installed, and then run this: OLD: rhc app-create -s yourapp https://raw.github.com/weaver-viii/openshift-immutant-cart/master/metadata/manifest.yml :
 
-OLD: rhc app-create -s yourapp https://raw.github.com/weaver-viii/openshift-immutant-cart/master/metadata/manifest.yml 
     rhc app-create -s yourapp https://github.com/weaver-viii/openshift-immutant-cart/blob/master/metadata/manifest.yml
 Replace `yourapp` with the name of your application. The `-s` option
 sets your app to be scalable. Once created, you can login to your gear
